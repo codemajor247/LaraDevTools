@@ -1,12 +1,19 @@
 {
-    "name": "miladseifoori/dev-tools",
-    "description": "Private Developer Tools",
-    "minimum-stability": "stable",
-    "type": "library",
-    "require": {},
-    "autoload": {
-        "psr-0": {
-            "DevTools": "src/"
-        }
+  "name": "miladseifoori/dev-tools",
+  "description": "Private Developer Tools",
+  "minimum-stability": "stable",
+  "type": "library",
+  "license": "GNU",
+  "authors": [
+    {
+      "name": "Milad Seifoori",
+      "email": "milad.seifoori@gmail.com"
     }
+  ],
+  "autoload": {
+    "psr-4": {
+      "DevTools": "src/"
+    }
+  },
+  "require": {}
 }
