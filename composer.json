@@ -3,7 +3,6 @@
   "description": "Private Developer Tools",
   "minimum-stability": "stable",
   "type": "library",
-  "license": "GNU",
   "authors": [
     {
       "name": "Milad Seifoori",
