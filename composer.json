@@ -3,6 +3,7 @@
   "description": "Private Developer Tools",
   "minimum-stability": "stable",
   "type": "library",
+  "license": "MIT",
   "authors": [
     {
       "name": "Milad Seifoori",
