@@ -56,7 +56,7 @@ class DevTools
         return $content;
     }
 
-    public static function HttpGet($url, $header)
+    public static function httpGet($url, $header)
     {
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
@@ -68,7 +68,7 @@ class DevTools
         return $content;
     }
 
-    public static function HttpPost($url, $header, $content)
+    public static function httpPost($url, $header, $content)
     {
         $ch = curl_init();
         curl_setopt_array($ch, array(
