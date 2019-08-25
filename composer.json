@@ -3,9 +3,7 @@
     "description": "Private Developer Tools",
     "minimum-stability": "stable",
     "type": "library",
-    "require": {
-        "php": ">=5.3.0"
-    },
+    "require": {},
     "autoload": {
         "psr-0": {
             "DevTools": "src/"
