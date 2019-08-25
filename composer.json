@@ -1,0 +1,14 @@
+{
+    "name": "miladseifoori/dev-tools",
+    "description": "Private Developer Tools",
+    "minimum-stability": "stable",
+    "type": "library",
+    "require": {
+        "php": "^7.2"
+    },
+    "autoload": {
+        "psr-0": {
+            "DevTools": "src/"
+        }
+    }
+}
