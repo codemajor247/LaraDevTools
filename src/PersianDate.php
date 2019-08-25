@@ -1,12 +1,12 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: miladseifoori
+ * User: src
  * Date: 6/18/2018 AD
  * Time: 00:14
  */
 
-namespace miladseifoori;
+namespace src;
 
 
 class PersianDate
