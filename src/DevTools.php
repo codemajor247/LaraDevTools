@@ -1,6 +1,8 @@
 <?php
 
-namespace src;
+namespace miladseifoori\DevTools;
+
+use src\PersianDate;
 
 class DevTools
 {
@@ -98,5 +100,4 @@ class DevTools
             return false;
         }
     }
-
 }
