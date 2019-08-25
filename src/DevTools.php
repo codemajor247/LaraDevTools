@@ -2,9 +2,6 @@
 
 namespace src;
 
-
-use Illuminate\Support\Facades\Response;
-
 class DevTools
 {
     public static function generateUID()
@@ -100,21 +97,6 @@ class DevTools
         } else {
             return false;
         }
-    }
-
-    public static function showResponse($status, $message, $code, $hasModel, $modelKey, $modelData)
-    {
-        if ($hasModel) {
-            return Response::json([$modelKey => json_decode($modelData, true)], 200, [], JSON_PRETTY_PRINT);
-        } else {
-            $response = [
-                'status' => $status,
-                'message' => $message,
-            ];
-            return response($response, $code)
-                ->header('Content-Type', 'application/json');
-        }
-
     }
 
 }
