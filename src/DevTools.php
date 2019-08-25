@@ -1,6 +1,6 @@
 <?php
 
-namespace MiladSeifoori\DevTools;
+namespace MiladSeifoori\Tools;
 
 class DevTools
 {

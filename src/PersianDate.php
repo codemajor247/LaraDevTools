@@ -6,7 +6,7 @@
  * Time: 00:14
  */
 
-namespace MiladSeifoori\DevTools;
+namespace MiladSeifoori\Tools;
 
 
 class PersianDate
