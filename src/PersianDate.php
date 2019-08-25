@@ -6,7 +6,7 @@
  * Time: 00:14
  */
 
-namespace src;
+namespace MiladSeifoori\DevTools;
 
 
 class PersianDate
@@ -200,7 +200,6 @@ class PersianDate
         return $i;
     }
 
-///Find num of Day Begining Of Month ( 0 for Sat & 6 for Sun)
     function mstart($month, $day, $year)
     {
         list($Dyear, $Dmonth, $Dday) = $this->gregorian_to_mds($year, $month, $day);
@@ -209,7 +208,6 @@ class PersianDate
         return date("w", $timestamp);
     }
 
-//Find Number Of Days In This Month
     function lastday($month, $day, $year)
     {
         $Dday2 = "";
@@ -237,7 +235,6 @@ class PersianDate
         return $lastdatep - 1;
     }
 
-//Find days in this year untile now
     function days_of_year($Dmonth, $Dday, $Dyear)
     {
         $year = "";
@@ -253,7 +250,6 @@ class PersianDate
         return $result + $Dday;
     }
 
-//translate number of month to name of month
     function monthname($month)
     {
 
@@ -310,7 +306,6 @@ class PersianDate
         if ($month == "12") return "&#1575;&#1587;&#1601; ";
     }
 
-//converts the numbers into the persian's number
     public function Convertnumber2farsi($srting)
     {
         $num0 = "&#1776;";
@@ -341,7 +336,7 @@ class PersianDate
         }
         return $stringtemp;
 
-    }///end conver to number in persian
+    }
 
     function is_kabise($year)
     {

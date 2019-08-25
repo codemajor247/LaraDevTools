@@ -11,9 +11,12 @@
     }
   ],
   "autoload": {
-    "psr-0": {
-      "miladseifoori\\DevTools\\": "src/"
+    "psr-4": {
+      "MiladSeifoori\\DevTools\\": "src/"
     }
   },
-  "require": {}
+  "require": {
+    "php": ">=5.4.0",
+    "illuminate/support": "4.*|5.*",
+  }
 }
