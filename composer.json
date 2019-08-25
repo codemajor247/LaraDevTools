@@ -3,6 +3,7 @@
   "description": "Private Developer Tools",
   "minimum-stability": "stable",
   "type": "library",
+  "license": "GNU",
   "authors": [
     {
       "name": "Milad Seifoori",
@@ -10,7 +11,7 @@
     }
   ],
   "autoload": {
-    "psr-4": {
+    "psr-0": {
       "DevTools": "src/"
     }
   },
