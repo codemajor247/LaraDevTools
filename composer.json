@@ -6,7 +6,7 @@
     "require": {},
     "autoload": {
         "psr-0": {
-            "DevTools": "src/"
+            "DevTools": "miladseifoori/"
         }
     }
 }
