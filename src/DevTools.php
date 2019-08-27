@@ -2,6 +2,8 @@
 
 namespace MiladSeifoori\Tools;
 
+use http\Env\Response;
+
 class DevTools
 {
     public static function generateUID()
@@ -31,6 +33,21 @@ class DevTools
         $date =  self::mds_date("Y/m/d", "now", 0);
         $month = explode('/', $date)[1];
         return self::monthname($month);
+    }
+
+    public static function showResponse($status, $message, $code, $hasModel, $modelKey, $modelData)
+    {
+        if ($hasModel) {
+            return Response::json([$modelKey => json_decode($modelData, true)], 200, [], JSON_PRETTY_PRINT);
+        } else {
+            $response = [
+                'status' => $status,
+                'message' => $message,
+            ];
+            return response($response, $code)
+                ->header('Content-Type', 'application/json');
+        }
+
     }
 
     public static function getPersianDate($isPersianNumber = false)
