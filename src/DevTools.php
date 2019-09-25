@@ -3,16 +3,27 @@
 namespace MiladSeifoori\Tools;
 
 use http\Env\Response;
+use ArrayAccess;
 
 class DevTools
 {
+
+    public static function addArray($array, $items)
+    {
+        foreach ($items as $key => $value) {
+            $array = array_add($items, $key, $value);
+        }
+
+        return $array;
+    }
+
     public static function generateUID()
     {
         if (function_exists('com_create_guid') === true) {
             return trim(com_create_guid(), '{}');
         }
-
-        return sprintf('%04X%04X-%04X-%04X-%04X-%04X%04X%04X', mt_rand(0, 65535), mt_rand(0, 65535), mt_rand(0, 65535), mt_rand(16384, 20479), mt_rand(32768, 49151), mt_rand(0, 65535), mt_rand(0, 65535), mt_rand(0, 65535));
+        $generated = sprintf('%04X%04X-%04X-%04X-%04X-%04X%04X%04X', mt_rand(0, 65535), mt_rand(0, 65535), mt_rand(0, 65535), mt_rand(16384, 20479), mt_rand(32768, 49151), mt_rand(0, 65535), mt_rand(0, 65535), mt_rand(0, 65535));
+        return strtolower($generated);
     }
 
     public static function generatePIN()
@@ -30,7 +41,7 @@ class DevTools
     public static function getPersianMonth()
     {
         date_default_timezone_set('Iran');
-        $date =  self::mds_date("Y/m/d", "now", 0);
+        $date = self::mds_date("Y/m/d", "now", 0);
         $month = explode('/', $date)[1];
         return self::monthname($month);
     }
@@ -296,7 +307,7 @@ class DevTools
         if (!$hour && !$minute && !$second && !$Dmonth && !$Dmonth && !$Dday && !$Dyear)
             return mktime();
         if ($Dmonth > 11) die("Incorrect month number");
-        list($year, $month, $day) =self::mds_to_gregorian($Dyear, $Dmonth, $Dday);
+        list($year, $month, $day) = self::mds_to_gregorian($Dyear, $Dmonth, $Dday);
         $i = mktime($hour, $minute, $second, $month, $day, $year);
         return $i;
     }
@@ -314,7 +325,7 @@ class DevTools
         $Dday2 = "";
         $jdate2 = "";
         $lastdayen = date("d", mktime(0, 0, 0, $month + 1, 0, $year));
-        list($Dyear, $Dmonth, $Dday) =self::gregorian_to_mds($year, $month, $day);
+        list($Dyear, $Dmonth, $Dday) = self::gregorian_to_mds($year, $month, $day);
         $lastdatep = $Dday;
         $Dday = $Dday2;
         while ($Dday2 != "1") {
